@@ -1,0 +1,2 @@
+export HF_ENDPOINT=https://hf-mirror.com
+huggingface-cli download --repo-type model hyb1124/Bindyouravatar/face_encoder --local_dir ./weights/face_encoder
