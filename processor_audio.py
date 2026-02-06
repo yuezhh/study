@@ -74,8 +74,9 @@ class AudioDatasetPreprocessor:
             for person, audio_path in item['cond_audio'].items():
                 emb_path = self.embedding_writer.process_audio(audio_path)
                 item['cond_audio'][person] = emb_path
-        out_path = Path(input_json).with_name(f"{Path(input_json).stem}_updated.json")
-        json.dump(data, open(out_path, "w"), indent=4, ensure_ascii=False)
+        out_path = input_json.with_name(f"{input_json.stem}_updated.json")
+        with open(out_path, "w", encoding='utf-8') as f:
+            json.dump(data, f, indent=4, ensure_ascii=False)
         return str(out_path)
 
 def main():
