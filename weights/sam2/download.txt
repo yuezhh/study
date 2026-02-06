@@ -1,1 +1,2 @@
 https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_large.pt
+huggingface-cli download --repo-type model hyb1124/Bindyouravatar/sam2 --local_dir ./weights/sam2
